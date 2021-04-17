@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header {
+  padding: 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(248, 239, 239);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(233, 69, 51);
+  width: 90%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: salmon;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+a:hover {
+  background-color: salmon;
+  color: aliceblue;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #eee;
+  color: salmon;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+input:focus {
+  border: none;
+  outline-width: 0;
+  border-bottom: 1px solid salmon;
+}
+
+button {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: salmon;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid rgb(241, 30, 7);
+}
+
+.about {
+  display: flex;
+  width: 100%;
+}
+
+.about p {
+  width: 80%;
+  margin: 15px auto;
+}
+
+#weather,
+#temp,
+#country {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(248, 239, 239);
+  width: 98%;
+  padding-left: 10px;
+  margin: auto;
+  color: rgb(228, 67, 49);
+}
+
+.error {
+  margin: auto;
+  color: rgb(10, 70, 105);
+}
