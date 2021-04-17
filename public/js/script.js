@@ -15,18 +15,16 @@ weatherForm.addEventListener("submit", (e) => {
   temp.textContent = "";
   country.textContent = "";
 
-  fetch("http://localhost:3000/weather?address=" + location).then(
-    (response) => {
-      response.json().then((data) => {
-        if (data.err) {
-          loading.textContent = data.err;
-        } else {
-          loading.textContent = "";
-          temp.textContent = "Temperature : " + data.main.temp + " Celsius";
-          weather.textContent = "Weather : " + data.weather;
-          country.textContent = "Country : " + data.country;
-        }
-      });
-    }
-  );
+  fetch("/weather?address=" + location).then((response) => {
+    response.json().then((data) => {
+      if (data.err) {
+        loading.textContent = data.err;
+      } else {
+        loading.textContent = "";
+        temp.textContent = "Temperature : " + data.main.temp + " Celsius";
+        weather.textContent = "Weather : " + data.weather;
+        country.textContent = "Country : " + data.country;
+      }
+    });
+  });
 });
