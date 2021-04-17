@@ -15,7 +15,7 @@ weatherForm.addEventListener("submit", (e) => {
   temp.textContent = "";
   country.textContent = "";
 
-  fetch("/weather?address=" + location).then((response) => {
+  fetch("weather?address=" + location).then((response) => {
     response.json().then((data) => {
       if (data.err) {
         loading.textContent = data.err;
